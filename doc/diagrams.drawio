@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2024-04-28T10:57:16.714Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0" etag="JsLt60VVF5ix_g4DO-q7" version="24.2.1" type="device">
+  <diagram name="Страница — 1" id="91q8IOprB8hdr2_8PSGO">
+    <mxGraphModel dx="1323" dy="1397" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-18" value="" style="rounded=1;whiteSpace=wrap;html=1;fillOpacity=100;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="190" y="60" width="1030" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-15" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="660" y="90" width="530" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-14" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="380" y="90" width="250" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-5" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="460" y="680" width="180" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-1" value="&lt;div style=&quot;font-size: 14px;&quot;&gt;Create Test&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;POST /notes&lt;/b&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="490" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-2" value="&lt;div style=&quot;font-size: 14px;&quot;&gt;Get Test by ID&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;GET/notes&lt;/b&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="490" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-3" value="&lt;div style=&quot;font-size: 14px;&quot;&gt;Update Test&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;PATCH /notes&lt;/b&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="490" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-4" value="&lt;div style=&quot;font-size: 14px;&quot;&gt;Delete Test&lt;/div&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;DELETE /notes&lt;/b&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="490" y="1070" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Middleware&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="240" y="870" width="140" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-7" value="PostgreSQL" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="60" y="230" width="100" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-8" value="&lt;div&gt;Device&lt;/div&gt;&lt;div&gt;Type:&amp;nbsp; string&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-9" value="&lt;div&gt;Refrigerators&lt;/div&gt;&lt;div&gt;id: int&lt;/div&gt;&lt;div&gt;name: string&lt;/div&gt;&lt;div&gt;type ref: string&lt;br&gt;&lt;/div&gt;&lt;div&gt;amount compressor: int&lt;/div&gt;&lt;div&gt;type compressor: string&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-10" value="&lt;div&gt;Washing Machine&lt;br&gt;&lt;/div&gt;&lt;div&gt;id: int&lt;/div&gt;&lt;div&gt;name: string&lt;/div&gt;&lt;div&gt;type: string&lt;br&gt;&lt;/div&gt;&lt;div&gt;speed: int&lt;/div&gt;&lt;div&gt;steam: bool&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="120" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-11" value="&lt;div&gt;Type Refrigerators&lt;/div&gt;&lt;div&gt;id: int&lt;/div&gt;&lt;div&gt;name: string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-12" value="&lt;div&gt;Speed Washing Maschine&lt;br&gt;&lt;/div&gt;&lt;div&gt;id: int&lt;/div&gt;&lt;div&gt;name: string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="320" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vp98r9l8fFBm97P3Cf8W-13" value="&lt;div&gt;Type Washing Maschine&lt;br&gt;&lt;/div&gt;&lt;div&gt;id: int&lt;/div&gt;&lt;div&gt;type: string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="960" y="320" width="210" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
