@@ -8,10 +8,10 @@ class Category(models.Model):
     )
 
     id_cat = models.PositiveIntegerField(primary_key=True, serialize=True)
-    name = models.CharField(max_length=50, choices=DEV_CATEGORY, db_index=True, blank=False, default='')
+    name = models.CharField(max_length=50, choices=DEV_CATEGORY, db_index=True, blank=False)
 
 
-class Refrigerators(models.Model):
+class Refrigerator(models.Model):
     id_ref = models.PositiveIntegerField(primary_key=True, serialize=True)
     name = models.CharField(verbose_name='Name', max_length=100, blank=False)
     amount_compressor = models.PositiveSmallIntegerField(blank=False)
