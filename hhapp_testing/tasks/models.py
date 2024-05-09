@@ -26,4 +26,4 @@ class Refrigerator(models.Model):
     class Meta:
         verbose_name = 'Refrigerator'
         verbose_name_plural = 'Refrigerators'
-        ordering = ['name', 'amount_compressor', 'category']
+        ordering = ['name', 'amount_compressor', 'no_frost', 'category']

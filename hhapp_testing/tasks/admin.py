@@ -10,6 +10,6 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Refrigerator)
 class RefrigeratorAdmin(admin.ModelAdmin):
-    list_display = ('name', 'no_frost', 'amount_compressor', 'category')
-    list_filter = ('name', 'no_frost', 'amount_compressor', 'category')
-    search_fields = ('name', 'no_frost', 'amount_compressor', 'category')
+    list_display = ('name', 'amount_compressor', 'no_frost', 'category')
+    list_filter = ('name', 'amount_compressor', 'no_frost', 'category')
+    search_fields = ('name', 'amount_compressor', 'no_frost', 'category')
