@@ -7,8 +7,7 @@ class Category(models.Model):
         ('washing_mach', 'Washing Machine')
     )
 
-    id_cat = models.PositiveIntegerField(primary_key=True, serialize=True)
-    name = models.CharField(max_length=50, blank=False)
+    name = models.CharField(verbose_name='Category', max_length=50)
 
     class Meta:
         verbose_name = 'Category'
@@ -17,11 +16,10 @@ class Category(models.Model):
 
 
 class Refrigerator(models.Model):
-    id_ref = models.PositiveIntegerField(primary_key=True, serialize=True)
-    category = models.ForeignKey(Category, on_delete=models.PROTECT, blank=False, null=True)
-    name = models.CharField(verbose_name='Name', max_length=100, blank=False)
-    amount_compressor = models.PositiveSmallIntegerField(blank=False)
-    no_frost = models.BooleanField(blank=False, default=False)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    name = models.CharField(verbose_name='Name', max_length=100)
+    amount_compressor = models.PositiveSmallIntegerField()
+    no_frost = models.BooleanField(default=False)
     
 
     class Meta:
@@ -31,7 +29,7 @@ class Refrigerator(models.Model):
 
 
 class Compressor(models.Model):
-    refrigerator = models.ForeignKey(Refrigerator, on_delete=models.PROTECT, blank=False, null=True)
+    refrigerator = models.ForeignKey(Refrigerator, on_delete=models.CASCADE, blank=True, null=True)
     name = models.CharField(verbose_name='Compressor model', max_length=50) 
 
     class Meta:
@@ -48,14 +46,13 @@ class ResearchRef(models.Model):
         ('in_process', 'In Process')
     )
 
-    id_res = models.PositiveIntegerField(primary_key=True, serialize=True)
-    device = models.ForeignKey(Refrigerator, on_delete=models.PROTECT, null=True)
-    describe = models.TextField(blank=True, null=True,  help_text='Additional info about research')
-    status = models.CharField(max_length=50, choices=RES_STATUS, blank=False)
+    device = models.ForeignKey(Refrigerator, on_delete=models.CASCADE, null=True)
+    describe = models.TextField(blank=True, null=True,  help_text='Additional info, result of research')
+    status = models.CharField(max_length=50, choices=RES_STATUS)
     date_start = models.DateField()
     date_finish = models.DateField(blank=True, null=True)
 
     class Meta:
         verbose_name = 'Refrigerator research'
         verbose_name_plural = 'Refrigerator research'
-        ordering = ['id_res', 'device', 'status', 'date_start', 'date_finish']
+        ordering = ['device', 'status', 'date_start', 'date_finish']

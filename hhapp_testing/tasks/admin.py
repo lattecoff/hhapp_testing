@@ -24,6 +24,6 @@ class CompressorAdmin(admin.ModelAdmin):
 
 @admin.register(ResearchRef)
 class ResearchRefAdmin(admin.ModelAdmin):
-    list_display = ('id_res', 'device', 'status', 'date_start', 'date_finish')
-    list_filter = ('id_res', 'device', 'status', 'date_start', 'date_finish')
-    search_fields = ('id_res', 'device', 'status', 'date_start', 'date_finish')
+    list_display = ('device', 'status', 'date_start', 'date_finish')
+    list_filter = ('device', 'status', 'date_start', 'date_finish')
+    search_fields = ('device', 'status', 'date_start', 'date_finish')
