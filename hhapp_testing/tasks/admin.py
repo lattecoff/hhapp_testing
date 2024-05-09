@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Refrigerator
+from .models import Category, Refrigerator, ResearchRef
 
 # Register your models here.
 @admin.register(Category)
@@ -13,3 +13,10 @@ class RefrigeratorAdmin(admin.ModelAdmin):
     list_display = ('name', 'amount_compressor', 'no_frost', 'category')
     list_filter = ('name', 'amount_compressor', 'no_frost', 'category')
     search_fields = ('name', 'amount_compressor', 'no_frost', 'category')
+
+
+@admin.register(ResearchRef)
+class ResearchRefAdmin(admin.ModelAdmin):
+    list_display = ('id_res', 'device', 'status', 'date_start', 'date_finish')
+    list_filter = ('id_res', 'device', 'status', 'date_start', 'date_finish')
+    search_fields = ('id_res', 'device', 'status', 'date_start', 'date_finish')

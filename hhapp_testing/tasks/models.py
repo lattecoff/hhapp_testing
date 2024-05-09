@@ -27,3 +27,23 @@ class Refrigerator(models.Model):
         verbose_name = 'Refrigerator'
         verbose_name_plural = 'Refrigerators'
         ordering = ['name', 'amount_compressor', 'no_frost', 'category']
+
+
+class ResearchRef(models.Model):
+    RES_STATUS = (
+        ('success', 'Success'),
+        ('fail', 'Fail'),
+        ('in_process', 'In Process')
+    )
+
+    id_res = models.PositiveIntegerField(primary_key=True, serialize=True)
+    device = models.ForeignKey('Refrigerator', on_delete=models.PROTECT, null=True)
+    describe = models.TextField(blank=True, null=True,  help_text='Additional info about research')
+    status = models.CharField(max_length=50, choices=RES_STATUS, db_index=True, blank=False)
+    date_start = models.DateField()
+    date_finish = models.DateField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Refrigerator research'
+        verbose_name_plural = 'Refrigerator research'
+        ordering = ['id_res', 'device', 'status', 'date_start', 'date_finish']
