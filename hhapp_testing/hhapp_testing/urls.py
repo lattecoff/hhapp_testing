@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from tasks import views
+from tasks.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/resreflist/', ResearchRefAPIList.as_view()),
+    path('api/resreflist/<int:pk>/', ResearchRefAPIList.as_view()),
     path('', views.home, name='home')
 ]
