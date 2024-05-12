@@ -23,6 +23,7 @@ from tasks.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/resreflist/', ResearchRefAPIList.as_view()),
-    path('api/resreflist/<int:pk>/', ResearchRefAPIList.as_view()),
+    path('api/resreflist/<int:pk>/', ResearchRefAPIUpdate.as_view()),
+    path('api/resrefdetail/<int:pk>/', ResearchRefAPIDetail.as_view()),
     path('', views.home, name='home')
 ]

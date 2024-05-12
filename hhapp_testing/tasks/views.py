@@ -14,6 +14,17 @@ class ResearchRefAPIList(generics.ListCreateAPIView):
     serializer_class = ResearchRefSerializer
 
 
+class ResearchRefAPIUpdate(generics.UpdateAPIView):
+    queryset = ResearchRef.objects.all()
+    serializer_class = ResearchRefSerializer
+
+
+class ResearchRefAPIDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ResearchRef.objects.all()
+    serializer_class = ResearchRefSerializer
+
+
+
 def home(request):
     #return HttpResponse('hello world')
     return render(request, 'index.html', context={})
