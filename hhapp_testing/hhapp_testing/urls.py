@@ -15,15 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from tasks import views
+from rest_framework import routers
 from tasks.views import *
+
+
+router = routers.SimpleRouter() 
+router.register(r'researchref', ResearchRefViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/resreflist/', ResearchRefAPIList.as_view()),
-    path('api/resreflist/<int:pk>/', ResearchRefAPIUpdate.as_view()),
-    path('api/resrefdetail/<int:pk>/', ResearchRefAPIDetail.as_view()),
+    path('api/', include(router.urls)),
     path('', views.home, name='home')
 ]
