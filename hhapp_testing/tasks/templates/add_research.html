@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add research</title>
+</head>
+<body>
+    <form action="/submit_form.php" method="post"> <!-- Путь к скрипту обработки формы -->
+    
+    <!-- Текстовое поле для устройства -->
+    <div class="form-block-device">
+        <label for="device">Device:</label>
+        <input type="text" id="device" name="device" required>
+    </div>
+
+    <!-- Текстовый блок для описания -->
+    <div class="form-block-describe">
+        <label for="describe">Describe:</label>
+        <textarea id="describe" name="describe" rows="5" cols="40"></textarea>
+    </div>
+
+    <!-- Список статусов -->
+    <div class="form-block-status">
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="">Выберите статус</option>
+            <option value="new">In process</option>
+            <option value="in progress">Fail</option>
+            <option value="completed">Success</option>
+        </select>
+    </div>
+
+    
+    <!-- Дата начала -->
+    <div class="form-block-dates">
+        <label for="date_start">Date start:</label>
+        <input type="date" id="date_start" name="date_start" required>
+        
+        <!-- Дата окончания -->
+        <label for="date_end">Date finish:</label>
+        <input type="date" id="date_end" name="date_end" required>
+    </div>
+    
+    
+    <!-- Кнопка отправки формы -->
+    <button type="submit">Send</button>
+    
+    </form>
+    
+    </body>
+</html>
